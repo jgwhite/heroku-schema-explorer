@@ -1,1 +1,7 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<div>
+  {{#if schema}}
+    <schema-card @schema={{schema}} />
+  {{else}}
+    <div class="ba b--moon-gray lh-copy pa3 mv3 br2 f6 fw6">Loading…</div>
+  {{/if}}
+</div>

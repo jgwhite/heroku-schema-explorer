@@ -1,0 +1,27 @@
+<article class="ba b--moon-gray lh-copy pa3 mv3 br2">
+  {{#with @definition.title as |title|}}
+    <h1 class="f6 fw6 ma0 lh-copy">{{title}}</h1>
+  {{/with}}
+  {{#with @definition.description as |description|}}
+    <p class="f6 fw4 ma0 lh-copy silver mw7">
+      {{#unless @definition.title}}
+        <span class="f6 br-pill ph2 pv0 mr1 dib white bg-dark-pink">{{typeString}}</span>
+      {{/unless}}
+      {{description}}
+      {{#with @definition.default as |default|}}
+        (default: {{default}})
+      {{/with}}
+    </p>
+    {{#if properties.length}}
+      <hr class="hr bg-moon-gray mv3">
+    {{/if}}
+  {{/with}}
+  {{#each properties key="key" as |property|}}
+    <details class="lh-copy">
+      <summary class="f6 fw4 lh-copy">{{property.key}}</summary>
+      {{#with property.definition as |definition|}}
+        <definition-card @definition={{definition}} @schema={{@schema}} class="mt2" />
+      {{/with}}
+    </details>
+  {{/each}}
+</article>
