@@ -1,11 +1,11 @@
-<article class="ba b--moon-gray lh-copy pa3 mv3 br2">
+<article class="bg-white br2 pa3 mv3 shadow-outer-1">
   {{#with @definition.title as |title|}}
-    <h1 class="f6 fw6 ma0 lh-copy">{{title}}</h1>
+    <h1 class="f3 fw4 purple mt0 mb1 lh-copy">{{title}}</h1>
   {{/with}}
   {{#with @definition.description as |description|}}
-    <p class="f6 fw4 ma0 lh-copy silver mw7">
+    <p class="f4 ma0 lh-copy dark-gray measure">
       {{#unless @definition.title}}
-        <span class="f6 br-pill ph2 pv0 mr1 dib white bg-dark-pink">{{typeString}}</span>
+        <span class="f5 br-pill ph2 pv0 mr1 dib white bg-dark-pink">{{typeString}}</span>
       {{/unless}}
       {{description}}
       {{#with @definition.default as |default|}}
@@ -13,12 +13,12 @@
       {{/with}}
     </p>
     {{#if properties.length}}
-      <hr class="hr bg-moon-gray mv3">
+      <hr class="hr bg-light-gray mv3">
     {{/if}}
   {{/with}}
   {{#each properties key="key" as |property|}}
     <details class="lh-copy">
-      <summary class="f6 fw4 lh-copy">{{property.key}}</summary>
+      <summary class="f4 dark-gray lh-copy">{{property.key}}</summary>
       {{#with property.definition as |definition|}}
         <definition-card @definition={{definition}} @schema={{@schema}} class="mt2" />
       {{/with}}

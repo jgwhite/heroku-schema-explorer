@@ -9,15 +9,15 @@
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://www.herokucdn.com/purple3/latest/purple3.min.css">
     <link rel="stylesheet" href="{{rootURL}}app.css">
 
     {{content-for "head-footer"}}
   </head>
-  <body class="sans-serif lh-copy dark-gray ph3">
+  <body class="bg-light-silver ma0 flex justify-center ph3">
     {{content-for "body"}}
 
-    <div id="app"></div>
+    <div id="app" class="w-100 mw7"></div>
     <script src="{{rootURL}}app.js"></script>
 
     {{content-for "body-footer"}}
