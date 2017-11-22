@@ -1,13 +1,13 @@
-import { setupRenderingTest } from '@glimmer/test-helpers';
 import hbs from '@glimmer/inline-precompile';
+import { setupRenderingTest } from '@glimmer/test-helpers';
 
 const { module, test } = QUnit;
 
-module('Component: definition-card', function(hooks) {
+module('Component: DefinitionCard', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await this.render(hbs`<definition-card />`);
-    assert.ok(this.containerElement.querySelector('div'));
+    await this.render(hbs`<DefinitionCard />`);
+    assert.ok(this.containerElement.querySelector('article'));
   });
 });

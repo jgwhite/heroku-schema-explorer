@@ -1,3 +1,3 @@
-export default function eq([a, b]) {
+export default function eq([a, b]: any[]) {
   return a === b;
-};
+}

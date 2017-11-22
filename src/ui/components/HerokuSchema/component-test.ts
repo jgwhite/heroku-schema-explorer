@@ -1,13 +1,13 @@
-import { setupRenderingTest } from '@glimmer/test-helpers';
 import hbs from '@glimmer/inline-precompile';
+import { setupRenderingTest } from '@glimmer/test-helpers';
 
 const { module, test } = QUnit;
 
-module('Component: heroku-schema', function(hooks) {
+module('Component: HerokuSchema', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    await this.render(hbs`<heroku-schema />`);
-    assert.equal(this.containerElement.textContent, 'Welcome to Glimmer!\n');
+    await this.render(hbs`<HerokuSchema />`);
+    assert.ok(this.containerElement.querySelector('div'));
   });
 });
