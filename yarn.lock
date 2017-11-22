@@ -1065,7 +1065,7 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-broccoli-asset-rev@^2.4.3, broccoli-asset-rev@^2.5.0:
+broccoli-asset-rev@^2.4.3, broccoli-asset-rev@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/broccoli-asset-rev/-/broccoli-asset-rev-2.6.0.tgz#0633fc3a0b2ba0c2c1d56fa9feb7b331fc83be6d"
   dependencies:
