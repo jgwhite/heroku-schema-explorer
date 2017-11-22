@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'heroku-schema',
-    environment: environment
+    environment
   };
 
   return ENV;

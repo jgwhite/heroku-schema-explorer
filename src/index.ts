@@ -1,5 +1,5 @@
-import App from './main';
 import { ComponentManager, setPropertyDidChange } from '@glimmer/component';
+import App from './main';
 
 const app = new App();
 const containerElement = document.getElementById('app');
@@ -14,6 +14,6 @@ app.registerInitializer({
   }
 });
 
-app.renderComponent('heroku-schema', containerElement, null);
+app.renderComponent('HerokuSchema', containerElement, null);
 
 app.boot();

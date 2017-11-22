@@ -20,7 +20,7 @@
     <details class="lh-copy">
       <summary class="f4 dark-gray lh-copy">{{property.key}}</summary>
       {{#with property.definition as |definition|}}
-        <definition-card @definition={{definition}} @schema={{@schema}} class="mt2" />
+        <DefinitionCard @definition={{definition}} @schema={{@schema}} class="mt2" />
       {{/with}}
     </details>
   {{/each}}
